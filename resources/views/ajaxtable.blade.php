@@ -1,7 +1,7 @@
 @extends('layouts.layout')
 
 @section('content')
-<table class="table table-striped" id="datatable">
+<table class="table table-striped" id="dtable">
     <thead class="table-primary">
         <tr>
             
@@ -9,6 +9,7 @@
             <th>Age</th>
             <th>City</th>
             <th>Country</th>
+            
         </tr>
     </thead>
     <tbody>
@@ -22,15 +23,20 @@
 
     <script type="text/javascript">
         $(document).ready( function () {
-            $('#datatable').DataTable({
+            $('#dtable').dataTable({
                 "processing": true,
                 "serverSide": true,
-                "ajax":"{{route('index')}}",
+                "ajax": {
+                    "url": "{{ route('index') }}",
+                    "type": "GET"
+                 },
                 "columns": [
-                    {"data" : "name" , "name" : "name", "orderable": true , "searchable" : true},
-                    {"data" : "age" , "name" : "age"},
-                    {"data" : "city" , "name" : "city"},
-                    {"data" : "country" , "name" : "country"}
+                    
+                    {data : "name" , name : "name", orderable: true , searchable : true},
+                    {data : "age" , name : "age"},
+                    {data: "city" , name : "city"},
+                    {data : "country" , name : "country"}
+                    
                 ]
             }
 

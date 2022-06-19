@@ -24,7 +24,7 @@
           <a class="nav-link text-white"  href="/table"><b>TABLE DATA</b></a>
         </li>
         <li class="nav-item" >
-            <a class="nav-link text-white"  href="/ajax"><b>AJAX TABLE</b></a>
+            <a class="nav-link text-white"  href="/index"><b>AJAX TABLE</b></a>
           </li>
       </ul>
     <div class="container">

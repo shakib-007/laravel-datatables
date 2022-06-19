@@ -28,7 +28,7 @@ Route::get('/', function () {
 
 Route::get('/table',[HomeController::class, 'dataTable']);
 
-Route::get('/ajax',[HomeController::class, 'ajaxTable']);
+// Route::get('/ajax',[HomeController::class, 'ajaxTable']);
 
-Route::get('/index',[ApiController::class, 'getInfo'])->name('index');
+Route::get('/index',[HomeController::class, 'getInfo'])->name('index');
 
