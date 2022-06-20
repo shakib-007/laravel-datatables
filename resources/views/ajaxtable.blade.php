@@ -4,11 +4,12 @@
 <table class="table table-striped" id="dtable">
     <thead class="table-primary">
         <tr>
-            
+            <th>sl</th>
             <th>Name</th>
             <th>Age</th>
             <th>City</th>
             <th>Country</th>
+            
             
         </tr>
     </thead>
@@ -30,9 +31,10 @@
                     "url": "{{ route('index') }}",
                     "type": "GET"
                  },
+                
                 "columns": [
-                    
-                    {data : "name" , name : "name", orderable: true , searchable : true},
+                    {data: 'DT_RowIndex', name: 'DT_RowIndex', orderable: false, searchable: false},//USE FOR AUTOMATIC SERIAL INCREASE
+                    {data : "name" , name : "name", orderable: false , searchable : true},
                     {data : "age" , name : "age"},
                     {data: "city" , name : "city"},
                     {data : "country" , name : "country"}

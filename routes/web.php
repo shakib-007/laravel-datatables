@@ -26,7 +26,7 @@ Route::get('/', function () {
 //     return view('ajaxtable');
 // });
 
-Route::get('/table',[HomeController::class, 'dataTable']);
+Route::get('/table',[HomeController::class, 'dataTable'])->name('table');
 
 // Route::get('/ajax',[HomeController::class, 'ajaxTable']);
 
